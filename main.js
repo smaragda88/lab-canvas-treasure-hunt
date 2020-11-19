@@ -6,9 +6,6 @@ const h = canvasElement.height;
 
 // Iteration 1
 function drawGrid(w, h) {
-  // TODO: write the code of the function
-  //   context.canvasElement.width = w;
-  //   context.canvasElement.height = h;
   for (x = 0; x <= w; x += 50) {
     for (y = 0; y <= h; y += 50) {
       context.moveTo(x, 0);
