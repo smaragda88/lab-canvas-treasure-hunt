@@ -20,14 +20,8 @@ function drawGrid(w, h) {
 
 drawGrid(800, 400);
 
-function drawEverything() {
-  drawGrid();
-  // drawPlayer()
-  // drawTreasure()
-}
-
 drawEverything();
-
+// Iteration 2: The Character Class
 class Charachter {
   constructor(col, row) {
     (this.col = col), (this.row = row);
@@ -44,4 +38,22 @@ class Charachter {
   moveLeft() {
     this.col -= 1;
   }
+}
+
+// Iteration 3: Drawing the Player
+function drawPlayer() {
+  const player = new Image();
+  player.src = 'images/character-down.png';
+
+  player.addEventListener('load', () => {
+    const width = 45;
+    const ratio = player.height / player.width;
+    context.drawImage(player, 0, 0, width, width * ratio);
+  });
+}
+
+function drawEverything() {
+  drawGrid();
+  drawPlayer();
+  // drawTreasure()
 }
