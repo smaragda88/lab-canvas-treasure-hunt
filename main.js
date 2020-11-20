@@ -127,6 +127,7 @@ document.addEventListener('keydown', (event) => {
 
   if (player.row === treasure.row && player.col === treasure.col) {
     player.score++;
+    // Add score to html - it  does not work the way I want it to :(
     const newElement = document.createElement('span');
     newElement.innerText = ` ${player.score}`;
     const scoreId = document.getElementById('score');
@@ -143,5 +144,4 @@ function drawEverything() {
   drawTreasure();
 }
 
-// Add score to html
 setTimeout(drawEverything, 500);
